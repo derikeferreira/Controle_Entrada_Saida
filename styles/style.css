@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+body, html {
+    display: flex;
+    background-color: #FFFFFF;
+    height: 100%;
+    flex-direction: column;
+}
+
+header, footer {
+    flex-shrink: 0; /* Impede que o cabeçalho e o rodapé encolham */ 
+    position: fixed; 
+    width: 100%;
+    align-self: center;
+    z-index: 1000; 
+}
+
+header{
+    color: #ffffff;
+    background-color: #808080; 
+    height: 120px; 
+    top: 0; 
+}
+
+footer{
+    background-color: #F5F5F5; 
+    color: #ffffff;
+    height: 90px;
+    bottom: 0; 
+    z-index: 1000;
+}
+
+main {
+    flex: 1;
+    width: 85%;
+    align-self: center; 
+}
+
+.container-pages{
+    margin-top: 125px;
+    margin-bottom: 95px;
+}
+
+.logo{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(84, 60, 104); */
+}
+
+.logo h1{
+    font-size: 25px;
+    padding-left: 20px;
+    align-self: center;
+}
+
+.logo img{
+    padding-top: 15px;
+    width: 100px; 
+    height: auto; 
+}
+
+
+
+.footer-div{
+    flex-direction: column;
+    display: flex;
+    max-width: 380px;
+    /* background-color: aqua; */
+    font-size: 10px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+.social-midia{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 380px;
+    margin: 15px auto;
+    padding: 0 2%;
+}
+
+.footer-div img{
+    display: block;
+    width: 35px;
+    margin: 0px 30px;
+}
+
+
+/* COMEÇO HEADER */
+
+.menu{
+    align-self: center;
+    width: 55%;
+    text-align: right;
+}
+
+.menu ul a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.menu ul{
+    list-style-type: none; /* Remove os marcadores */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+    display: inline; /* Opcional: exibe os itens em linha */
+}
+
+/* FIM HEADER */
+
+
+/* COMEÇO DO HOME */
+
+
+.container-pages .div-home:first-child{
+    justify-content: center;
+    align-content: center;
+}
+
+.div-home{
+    padding-top: 20px;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.div-home h2{
+    font-size: 1.5rem;
+}
+
+.div-home p{
+    margin: 15px 0;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.home-div-img{
+    align-content: center;
+}
+
+.home-img{
+    width: 300px; 
+    height: auto; 
+    display: block;
+}
+/* FIM DO HOME */
+
+
+
+/* COMEÇO DO CSS DO HTML GUAIBA */
+
+
+.div-guaiba{
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.content-section {
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1); */
+    box-shadow: 5px 5px 5px 4px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+}
+
+.intro-text, .history-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.intro-text::first-letter, .history-text::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.intro-text::after, .history-text::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.history-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Aumenta o espaço entre o texto e a imagem */
+    margin-bottom: 40px; /* Adiciona margem inferior para separar as imagens */
+}
+
+.history-item img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.history-item p {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o texto */
+    flex: 1;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .history-item {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .history-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .intro-text, .history-text {
+        padding: 0;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+img {
+    width: 100%;
+    max-width: 1280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* FIM DO CSS DO HTML GUAIBA */
+
